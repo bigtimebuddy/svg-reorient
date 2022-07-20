@@ -1,0 +1,28 @@
+{
+    "name": "svg-reorient",
+    "version": "1.0.0",
+    "description": "Convert SVG with fill-rule evenodd to be compatible with nonzero",
+    "main": "index.mjs",
+    "type": "module",
+    "bin": {
+        "reorient": "cli.mjs"
+    },
+    "scripts": {
+        "test": "node cli.mjs examples/*.svg -o out"
+    },
+    "files": [
+        "*.mjs"
+    ],
+    "engineStrict": true,
+    "engines": {
+        "node": ">=12"
+    },
+    "keywords": [],
+    "author": "Matt Karl <matt@mattkarl.com>",
+    "license": "MIT",
+    "dependencies": {
+        "globby": "^13.1.2",
+        "minimist": "^1.2.6",
+        "paper": "^0.12.15"
+    }
+}
