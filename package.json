@@ -4,6 +4,7 @@
     "description": "Convert SVG with fill-rule evenodd to be compatible with nonzero",
     "main": "index.mjs",
     "type": "module",
+    "types": "index.d.ts",
     "bin": {
         "reorient": "cli.mjs"
     },
@@ -15,7 +16,8 @@
         "version:major": "npm version major && npm publish"
     },
     "files": [
-        "*.mjs"
+        "*.mjs",
+        "*.d.ts"
     ],
     "engineStrict": true,
     "engines": {
