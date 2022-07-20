@@ -8,7 +8,11 @@
         "reorient": "cli.mjs"
     },
     "scripts": {
-        "test": "node cli.mjs examples/*.svg -o out"
+        "test": "node cli.mjs examples/*.svg -o out",
+        "postversion": "git push && git push --tags",
+        "version:patch": "npm version patch && npm publish",
+        "version:minor": "npm version minor && npm publish",
+        "version:major": "npm version major && npm publish"
     },
     "files": [
         "*.mjs"
