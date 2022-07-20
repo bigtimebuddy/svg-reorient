@@ -1,6 +1,6 @@
 {
     "name": "svg-reorient",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Convert SVG with fill-rule evenodd to be compatible with nonzero",
     "main": "index.mjs",
     "type": "module",
