@@ -20,7 +20,7 @@ with updated paths.
 reorient path/to/*.svg
 ```
 
-Optionally, you can define an `-o` or `--output` direction to save files.
+Optionally, you can define an `-o` or `--output` directory to save files without overwriting.
 
 ```
 reorient *.svg -o dist
