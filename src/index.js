@@ -21,4 +21,3 @@ const reorient = (svgBuffer) => {
 };
 
 export { reorient };
-

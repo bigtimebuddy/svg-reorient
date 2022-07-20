@@ -2,21 +2,32 @@
     "name": "svg-reorient",
     "version": "1.0.1",
     "description": "Convert SVG with fill-rule evenodd to be compatible with nonzero",
-    "main": "index.mjs",
-    "type": "module",
+    "main": "index.cjs",
+    "module": "index.mjs",
     "types": "index.d.ts",
+    "exports": {
+        ".": {
+            "require": "./index.cjs",
+            "import": "./index.mjs",
+            "types": "./index.d.ts"
+        }
+    },
     "bin": {
         "reorient": "cli.mjs"
     },
     "scripts": {
         "test": "node cli.mjs examples/*.svg -o out",
+        "preversion": "rollup -c",
         "postversion": "git push && git push --tags",
         "version:patch": "npm version patch && npm publish",
         "version:minor": "npm version minor && npm publish",
-        "version:major": "npm version major && npm publish"
+        "version:major": "npm version major && npm publish",
+        "build": "rollup -c",
+        "watch": "rollup -cw"
     },
     "files": [
         "*.mjs",
+        "*.cjs",
         "*.d.ts"
     ],
     "engineStrict": true,
@@ -30,5 +41,8 @@
         "globby": "^13.1.2",
         "minimist": "^1.2.6",
         "paper": "^0.12.15"
+    },
+    "devDependencies": {
+        "rollup": "^2.77.0"
     }
 }
