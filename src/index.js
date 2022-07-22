@@ -14,7 +14,7 @@ const reorient = (svgBuffer) => {
     for (const match of matches) {
         const originalPath = match[1];
         const compoundPath = new paper.CompoundPath(originalPath);
-        const newPath = compoundPath.reorient().pathData;
+        const newPath = compoundPath.reorient(false, true).pathData;
         result = result.replace(originalPath, newPath);
     }
     return result;
